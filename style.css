@@ -1,0 +1,1094 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ========================================
+   GENERAL
+======================================== */
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+
+    --purple: #d500ff;
+    --blue: #008cff;
+
+    --deep-purple: #170047;
+
+    --card: rgba(0, 0, 0, 0.70);
+
+    --border: rgba(255, 255, 255, 0.75);
+
+    --text-gradient:
+        linear-gradient(
+            90deg,
+            #008cff 0%,
+            #7138d4 50%,
+            #d500ff 100%
+        );
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #000000;
+    color: #ffffff;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navbar {
+    height: 64px;
+
+    padding:
+        0
+        32px;
+
+    background: #000000;
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.figma-logo,
+.footer-logo {
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-weight: 800;
+
+    font-size: 24px;
+
+    width: 34px;
+
+    display: grid;
+    place-items: center;
+}
+
+
+.figma-logo span,
+.footer-logo {
+    color: #ffffff;
+}
+
+
+.desktop-nav {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 26px;
+}
+
+
+.desktop-nav a {
+    color: var(--purple);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+
+.desktop-nav a:hover {
+    color: var(--blue);
+}
+
+
+.nav-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.message-btn,
+.gmail-btn {
+    border-radius: 5px;
+
+    padding:
+        8px
+        15px;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+.message-btn {
+    color: #111111;
+
+    background: #ffffff;
+}
+
+
+.gmail-btn {
+    background: #334bd5;
+
+    color: #ffffff;
+}
+
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+
+    border: 0;
+
+    cursor: pointer;
+}
+
+
+.menu-toggle span {
+    display: block;
+
+    width: 25px;
+    height: 2px;
+
+    background: #ffffff;
+
+    margin: 5px;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+/*
+   IMPORTANT:
+   The Alisa image uses AUTO HEIGHT instead
+   of COVER.
+
+   This prevents the image from being
+   vertically cropped when the desktop
+   window changes size.
+*/
+
+.hero {
+    height: 430px;
+    min-height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #000000;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.96) 25%,
+            rgba(0, 0, 0, 0.10) 60%,
+            rgba(0, 0, 0, 0) 100%
+        ),
+        url("assets/alisa-hero.jpg");
+
+    /*
+       Keep the full vertical image visible.
+    */
+    background-size:
+        auto 100%,
+        auto 100%;
+
+    background-position:
+        center,
+        right center;
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        45px
+        5%;
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ========================================
+   HERO NAME
+======================================== */
+
+.hero h1 {
+    font-family:
+        "Cinzel Decorative",
+        "Times New Roman",
+        serif;
+
+    text-transform: uppercase;
+
+    font-variant: normal;
+
+    font-weight: 700;
+
+    font-size:
+        clamp(
+            27px,
+            3.6vw,
+            47px
+        );
+
+    line-height: 1.16;
+
+    letter-spacing: 0.2px;
+
+    max-width: 470px;
+
+    color: #d8d8d8;
+}
+
+
+.hero p {
+    color: #a8a8a8;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    margin-top: 6px;
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.section {
+    padding:
+        60px
+        5%;
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   ABOUT HEADING
+======================================== */
+
+.about h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-weight: 500;
+
+    font-size:
+        clamp(
+            42px,
+            5vw,
+            60px
+        );
+
+    text-align: left;
+
+    margin-bottom: 14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d500ff 0%,
+            #9a35d8 50%,
+            #7138d4 100%
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+}
+
+
+/* ========================================
+   ABOUT BODY TEXT
+======================================== */
+
+.about p {
+
+    max-width: 920px;
+
+    margin:
+        0
+        auto
+        24px;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    background:
+        linear-gradient(
+            90deg,
+            #008cff 0%,
+            #7138d4 50%,
+            #d500ff 100%
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+}
+
+
+/* ========================================
+   ABOUT QUOTE
+======================================== */
+
+.about .quote {
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #008cff 0%,
+            #7138d4 50%,
+            #d500ff 100%
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+}
+
+
+/* ========================================
+   GAMES
+======================================== */
+
+.games {
+
+    position: relative;
+
+    padding-top: 25px;
+
+    padding-bottom: 100px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.18)
+        ),
+
+        url("assets/games-wave.jpg")
+        center / cover;
+}
+
+
+/* ========================================
+   GAMES TITLE
+======================================== */
+
+.games-title {
+
+    text-align: center;
+
+    font-family:
+        "Audiowide",
+        "Courier New",
+        monospace;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            58px
+        );
+
+    margin-bottom: 45px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d500ff 0%,
+            #9a35d8 50%,
+            #7138d4 100%
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(
+                213,
+                0,
+                255,
+                0.30
+            )
+        );
+}
+
+
+/* ========================================
+   GAME GRID
+======================================== */
+
+.game-grid {
+
+    width:
+        min(
+            1060px,
+            100%
+        );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 24px;
+}
+
+
+/* ========================================
+   GAME CARD
+======================================== */
+
+.game-card {
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.76
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 6px;
+
+    padding: 14px;
+
+    min-height: 360px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+
+.game-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--purple);
+}
+
+
+.game-card img {
+
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 18px;
+}
+
+
+.game-info h3 {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+}
+
+
+.game-info p {
+
+    color: #f0f0f0;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.35;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+
+    background:
+        linear-gradient(
+            rgba(25, 0, 70, 0.90),
+            rgba(25, 0, 70, 0.90)
+        ),
+
+        url("assets/footer-wave.jpg")
+        center / cover;
+
+    padding:
+        35px
+        5%
+        18px;
+}
+
+
+.footer-main {
+
+    width:
+        min(
+            1180px,
+            100%
+        );
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 35px;
+}
+
+
+.footer-brand {
+
+    font-size: 13px;
+}
+
+
+.footer-logo {
+
+    margin-bottom: 14px;
+}
+
+
+.socials {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+
+.socials a {
+
+    font-size: 18px;
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.footer-column h4 {
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.footer-column a,
+.footer-brand p {
+
+    color: #eeeeee;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+.footer-credit {
+
+    width:
+        min(
+            1180px,
+            100%
+        );
+
+    margin:
+        45px
+        auto
+        0;
+
+    color: #aaaaaa;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .game-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+
+    .footer-main {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .navbar {
+
+        height: 58px;
+
+        padding:
+            0
+            18px;
+    }
+
+
+    .desktop-nav,
+    .nav-actions {
+
+        display: none;
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+        margin-left: auto;
+    }
+
+
+    .navbar.menu-open {
+
+        flex-wrap: wrap;
+
+        height: auto;
+
+        padding-bottom: 15px;
+    }
+
+
+    .navbar.menu-open
+    .desktop-nav,
+    .navbar.menu-open
+    .nav-actions {
+
+        display: flex;
+
+        width: 100%;
+    }
+
+
+    .navbar.menu-open
+    .desktop-nav {
+
+        justify-content: center;
+
+        margin-left: 0;
+
+        flex-wrap: wrap;
+    }
+
+
+    .navbar.menu-open
+    .nav-actions {
+
+        justify-content: center;
+    }
+
+
+    /* ====================================
+       MOBILE HERO
+    ==================================== */
+
+    .hero {
+
+        height: 330px;
+        min-height: 330px;
+
+        position: relative;
+
+        overflow: hidden;
+
+        padding:
+            35px
+            18px;
+
+        background-color: #000000;
+
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.98) 0%,
+                rgba(0, 0, 0, 0.82) 36%,
+                rgba(0, 0, 0, 0.15) 100%
+            ),
+            url("assets/alisa-hero.jpg");
+
+        /*
+           Same principle as desktop:
+           show the entire vertical image
+           instead of cropping it with cover.
+        */
+        background-size:
+            auto 100%,
+            auto 100%;
+
+        background-position:
+            center,
+            right center;
+
+        background-repeat:
+            no-repeat,
+            no-repeat;
+    }
+
+
+    .hero h1 {
+
+        font-size: 28px;
+
+        max-width: 200px;
+
+        color: #d8d8d8;
+    }
+
+
+    .hero p {
+
+        font-size: 12px;
+    }
+
+
+    /* ====================================
+       MOBILE ABOUT
+    ==================================== */
+
+    .section {
+
+        padding:
+            35px
+            20px;
+    }
+
+
+    .about {
+
+        text-align: center;
+    }
+
+
+    .about h2 {
+
+        text-align: left;
+
+        font-size: 38px;
+    }
+
+
+    .about p {
+
+        font-size: 11px;
+
+        line-height: 1.45;
+
+        margin-bottom: 18px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #008cff 0%,
+                #7138d4 50%,
+                #d500ff 100%
+            );
+
+        -webkit-background-clip: text;
+
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+
+        color: transparent;
+    }
+
+
+    .about .quote {
+
+        font-size: 11px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #008cff 0%,
+                #7138d4 50%,
+                #d500ff 100%
+            );
+
+        -webkit-background-clip: text;
+
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+
+        color: transparent;
+    }
+
+
+    /* ====================================
+       MOBILE GAMES
+    ==================================== */
+
+    .games {
+
+        padding:
+            30px
+            18px
+            65px;
+
+        background-position:
+            center;
+    }
+
+
+    .games-title {
+
+        font-size: 39px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .game-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        width:
+            min(
+                320px,
+                100%
+            );
+    }
+
+
+    .game-card {
+
+        min-height: 0;
+
+        padding: 12px;
+    }
+
+
+    .game-card img {
+
+        width: 100px;
+
+        height: 100px;
+
+        margin-bottom: 13px;
+    }
+
+
+    .game-info h3 {
+
+        font-size: 15px;
+    }
+
+
+    .game-info p {
+
+        font-size: 11px;
+    }
+
+
+    /* ====================================
+       MOBILE FOOTER
+    ==================================== */
+
+    .footer {
+
+        padding:
+            30px
+            18px;
+    }
+
+
+    .footer-main {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap:
+            25px
+            18px;
+    }
+
+
+    .footer-brand {
+
+        grid-column:
+            1 / -1;
+    }
+
+
+    .footer-column a,
+    .footer-brand p {
+
+        font-size: 10px;
+    }
+
+
+    .footer-credit {
+
+        margin-top: 30px;
+
+        font-size: 8px;
+    }
+
+}
